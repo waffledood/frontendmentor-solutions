@@ -4,6 +4,7 @@
   --font-weight-main: 700;
   --font-weight-secondary: 400;
   --font-size-secondary: 15px;
+  --width-qr-code: 30vh;
   --white: hsl(0, 0%, 100%);
   --light-gray: hsl(212, 45%, 89%);
   --grayish-blue: hsl(220, 15%, 55%);
@@ -12,6 +13,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: var(--default-font);
 }
 
 body {
@@ -50,6 +52,9 @@ body {
 .qr-code img {
   /* Border */
   border-radius: var(--border-radius);
+
+  /* Sizing */
+  width: var(--width-qr-code);
 }
 
 .qr-code-content {
@@ -62,24 +67,26 @@ body {
   align-items: center;
 
   /* Sizing */
-  max-width: 550px;
+  max-width: var(--width-qr-code);
+
+  /* Padding */
+  padding: 0 10px;
 
   /* Margin */
-  margin: 10px auto 20px;
+  margin: 20px 0;
 }
 
-.qr-code-content h1 {
+.qr-code-content .header {
   /* Font */
-  font-family: var(--default-font);
   font-weight: var(--font-weight-main);
+  color: var(--dark-blue);
+
+  /* Margin */
+  margin-bottom: 20px;
 }
 
-.qr-code-content span {
-  /* Padding */
-  padding: 0 70px;
-
+.qr-code-content .body {
   /* Font */
-  font-family: var(--default-font);
   font-weight: var(--font-weight-secondary);
   font-size: var(--font-size-secondary);
 
