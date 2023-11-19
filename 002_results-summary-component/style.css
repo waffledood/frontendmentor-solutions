@@ -13,6 +13,15 @@
   align-items: center;
 }
 
+.categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 50%;
+  width: 100%;
+}
+
 /* Attribution */
 .attribution {
   font-size: 11px;
