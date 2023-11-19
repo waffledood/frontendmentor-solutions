@@ -8,9 +8,13 @@
 .component {
   display: flex;
   flex-direction: column;
-  width: 30vw;
   justify-content: space-between;
   align-items: center;
+
+  height: 30vh;
+  width: 30vw;
+
+  padding: 2em;
 }
 
 .categories {
