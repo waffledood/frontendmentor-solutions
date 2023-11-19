@@ -1,3 +1,19 @@
+/* Main styling */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.component {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Attribution */
 .attribution {
   font-size: 11px;
   text-align: center;
