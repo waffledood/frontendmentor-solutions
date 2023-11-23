@@ -26,11 +26,13 @@
 
 /* Result */
 .result-header {
+  font-size: 21px;
   font-weight: 700;
 }
 
 /* Summary */
 .summary-header {
+  font-size: 21px;
   font-weight: 700;
 }
 
