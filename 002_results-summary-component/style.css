@@ -67,6 +67,14 @@ img {
   margin-right: 10px;
 }
 
+.score {
+  color: hsla(224, 30%, 27%, 50%);
+}
+
+.score span {
+  color: hsla(0, 0%, 0%);
+}
+
 #continue-btn {
   width: 100%;
 
