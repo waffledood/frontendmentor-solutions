@@ -1,6 +1,7 @@
 /* Reset */
 * {
   box-sizing: border-box;
+  font-size: 18px;
 }
 
 /* Main styling */
@@ -53,6 +54,23 @@
 
 img {
   margin-right: 10px;
+}
+
+/* Color palettes */
+.red-bg {
+  background-color: hsla(0, 100%, 67%, 10%);
+}
+
+.yellow-bg {
+  background-color: hsla(39, 100%, 56%, 10%);
+}
+
+.green-bg {
+  background-color: hsla(166, 100%, 37%, 10%);
+}
+
+.blue-bg {
+  background-color: hsla(234, 85%, 45%, 10%);
 }
 
 /* Attribution */
