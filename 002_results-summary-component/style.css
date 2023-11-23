@@ -67,6 +67,22 @@ img {
   margin-right: 10px;
 }
 
+#continue-btn {
+  width: 100%;
+
+  border: none;
+  border-radius: 20px;
+
+  padding: 10px;
+
+  background-color: hsl(224, 30%, 27%);
+  color: hsl(0, 0%, 100%);
+}
+
+#continue-btn:hover {
+  cursor: pointer;
+}
+
 /* Color palettes (Background) */
 .red-bg {
   background-color: hsla(0, 100%, 67%, 10%);
