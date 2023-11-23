@@ -5,6 +5,15 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+}
+
 /* Main styling */
 .container {
   display: flex;
