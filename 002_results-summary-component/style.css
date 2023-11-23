@@ -41,6 +41,10 @@ body {
 }
 
 /* Result */
+#result {
+  background-color: hsl(252, 100%, 67%);
+}
+
 .result-header {
   font-size: 21px;
   font-weight: 700;
