@@ -24,6 +24,16 @@
   padding: 2em;
 }
 
+/* Result */
+.result-header {
+  font-weight: 700;
+}
+
+/* Summary */
+.summary-header {
+  font-weight: 700;
+}
+
 .categories {
   display: flex;
   flex-direction: column;
