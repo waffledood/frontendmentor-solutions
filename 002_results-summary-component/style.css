@@ -27,7 +27,7 @@ body {
   border-radius: 20px;
 
   background-color: hsl(0, 0%, 100%);
-  box-shadow: 10px 10px 20px #ddd;
+  box-shadow: 10px 10px 20px hsl(241, 100%, 89%, 30%);
 }
 
 .component {
