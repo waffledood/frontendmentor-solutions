@@ -71,7 +71,12 @@ body {
 
 /* Result */
 #result {
-  background-color: hsl(252, 100%, 67%);
+  background-color: hsl(241, 81%, 54%);
+  background: linear-gradient(
+    0deg,
+    rgba(46, 43, 233, 1) 0%,
+    rgba(120, 87, 255, 1) 100%
+  );
 }
 
 .result-header {
