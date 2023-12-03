@@ -82,6 +82,7 @@ body {
 .result-header {
   font-size: 21px;
   font-weight: 700;
+  color: var(--neut-light-lav);
 }
 
 /* Summary */
