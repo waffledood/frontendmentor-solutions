@@ -85,6 +85,12 @@ body {
   color: var(--neut-light-lav);
 }
 
+.score {
+  font-size: 60px;
+  font-weight: 800;
+  color: var(--neut-white);
+}
+
 /* Summary */
 .summary-header {
   font-size: 21px;
