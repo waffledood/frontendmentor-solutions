@@ -91,6 +91,10 @@ body {
   color: var(--neut-white);
 }
 
+.total {
+  color: var(--neut-light-lav);
+}
+
 /* Summary */
 .summary-header {
   font-size: 21px;
