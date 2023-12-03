@@ -98,11 +98,11 @@ img {
   margin-right: 10px;
 }
 
-.score {
+.category-score {
   color: hsla(224, 30%, 27%, 50%);
 }
 
-.score span {
+.category-score span {
   color: hsla(0, 0%, 0%);
 }
 
