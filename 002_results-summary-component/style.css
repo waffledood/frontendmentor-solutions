@@ -189,6 +189,13 @@ img {
 
 #continue-btn:hover {
   cursor: pointer;
+
+  background-color: hsl(241, 81%, 54%);
+  background: linear-gradient(
+    0deg,
+    hsl(241, 81%, 54%) 0%,
+    hsl(252, 100%, 67%) 100%
+  );
 }
 
 /* Color palettes (Background) */
