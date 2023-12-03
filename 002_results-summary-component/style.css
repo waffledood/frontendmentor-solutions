@@ -5,6 +5,23 @@
   font-family: "Hanken Grotesk", sans-serif;
 }
 
+:root {
+  --pri-red: hsl(0, 100%, 67%);
+  --pri-org-yellow: hsl(39, 100%, 56%);
+  --pri-green-teal: hsl(166, 100%, 37%);
+  --pri-cob-blue: hsl(234, 85%, 45%);
+
+  --grad-slate-blue: hsl(252, 100%, 67%);
+  --grad-royal-blue: hsl(241, 81%, 54%);
+  --grad-violet-blue: hsla(256, 72%, 46%, 1);
+  --grad-pers-blue: hsla(241, 72%, 46%, 0);
+
+  --neut-white: hsl(0, 0%, 100%);
+  --neut-pale-blue: hsl(221, 100%, 96%);
+  --neut-light-lav: hsl(241, 100%, 89%);
+  --neut-dark-gray-blue: hsl(224, 30%, 27%);
+}
+
 body {
   display: flex;
   flex-direction: column;
