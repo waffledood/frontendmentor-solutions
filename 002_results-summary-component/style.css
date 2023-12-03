@@ -6,6 +6,7 @@
 }
 
 :root {
+  /* Colors */
   --pri-red: hsl(0, 100%, 67%);
   --pri-org-yellow: hsl(39, 100%, 56%);
   --pri-green-teal: hsl(166, 100%, 37%);
@@ -20,6 +21,12 @@
   --neut-pale-blue: hsl(221, 100%, 96%);
   --neut-light-lav: hsl(241, 100%, 89%);
   --neut-dark-gray-blue: hsl(224, 30%, 27%);
+
+  /* Font */
+  --font-size-para: 18px;
+  --font-size-L: 500;
+  --font-size-XL: 700;
+  --font-size-XXL: 800;
 }
 
 body {
