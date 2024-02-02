@@ -54,6 +54,15 @@ body {
   box-shadow: 10px 10px 20px hsl(241, 100%, 89%, 30%);
 }
 
+@media (max-width: 900px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    /* height: 100%; */
+  }
+}
+
 .component {
   display: flex;
   flex-direction: column;
