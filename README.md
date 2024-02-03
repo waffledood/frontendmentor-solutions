@@ -13,3 +13,9 @@ This repository contains my attempts to the different challenges on [Frontend Me
    Challenge page: [link](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV/hub)
 
    My attempt: [link](https://waffledood.github.io/frontendmentor-solutions/002_results-summary-component/)
+
+3. Product preview card component
+
+   Challenge page: [link](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa/hub)
+
+   My attempt: [link](https://waffledood.github.io/frontendmentor-solutions/003_product-preview-card-component)
