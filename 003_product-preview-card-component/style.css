@@ -55,6 +55,11 @@ img {
   width: 400px;
 }
 
+#product-name {
+  font-family: "Fraunces", sans-serif;
+  color: var(--neutral-dark-blue);
+}
+
 #product-details {
   height: 100%;
 
