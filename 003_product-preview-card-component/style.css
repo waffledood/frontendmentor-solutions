@@ -76,6 +76,12 @@ img {
   letter-spacing: 10px;
 }
 
+#product-description {
+  color: var(--neutral-dark-grayish-blue);
+
+  line-height: 2;
+}
+
 #cart-button {
   color: var(--neutral-white);
   background-color: var(--pri-dark-cyan);
