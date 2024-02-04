@@ -7,3 +7,11 @@ body {
   width: 100vw;
 }
 
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+.container-child {
+  width: 500px;
+}
