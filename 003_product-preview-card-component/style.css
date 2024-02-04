@@ -82,6 +82,26 @@ img {
   line-height: 2;
 }
 
+#price-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#original-price {
+  flex-grow: 1;
+  text-decoration: line-through;
+  text-align: center;
+}
+
+#new-price {
+  font-family: "Fraunces", sans-serif;
+}
+
+#new-price {
+  color: var(--pri-dark-cyan);
+}
+
 #cart-button {
   color: var(--neutral-white);
   background-color: var(--pri-dark-cyan);
