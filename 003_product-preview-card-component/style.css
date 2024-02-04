@@ -8,6 +8,7 @@
 :root {
   /* Colors */
   --pri-dark-cyan: hsl(158, 36%, 37%);
+  --pri-darker-cyan: hsl(158, 36%, 17%);
   --pri-cream: hsl(30, 38%, 92%);
 
   --neutral-dark-blue: hsl(212, 21%, 14%);
@@ -144,6 +145,10 @@ img {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+}
+
+#cart-button:hover {
+  background-color: var(--pri-darker-cyan);
 }
 
 #cart-icon {
