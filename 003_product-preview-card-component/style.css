@@ -29,5 +29,6 @@ img {
 }
 
 .container-child {
+  height: 750px;
   width: 500px;
 }
