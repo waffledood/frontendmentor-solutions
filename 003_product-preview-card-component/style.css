@@ -70,6 +70,12 @@ img {
   justify-content: space-between;
 }
 
+#product-type {
+  text-transform: uppercase;
+  color: var(--neutral-dark-grayish-blue);
+  letter-spacing: 10px;
+}
+
 #cart-button {
   color: var(--neutral-white);
   background-color: var(--pri-dark-cyan);
