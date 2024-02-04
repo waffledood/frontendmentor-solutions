@@ -32,3 +32,13 @@ img {
   height: 750px;
   width: 500px;
 }
+
+#product-details {
+  height: 100%;
+
+  padding: 32px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
