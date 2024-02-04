@@ -36,6 +36,8 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  background-color: var(--neutral-white);
 }
 
 img {
