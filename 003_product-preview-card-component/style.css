@@ -44,6 +44,33 @@ main {
   overflow: hidden;
 }
 
+#product-desktop-img {
+  display: block;
+}
+
+#product-mobile-img {
+  display: none;
+}
+
+/* Media Queriy for Mobile displays */
+@media (max-width: 900px) {
+  main {
+    display: flex;
+    flex-direction: column;
+
+    height: 90%;
+  }
+
+  /* Hide the Product Desktop image */
+  #product-desktop-img {
+    display: none;
+  }
+
+  #product-mobile-img {
+    display: block;
+  }
+}
+
 img {
   height: 100%;
   width: 100%;
