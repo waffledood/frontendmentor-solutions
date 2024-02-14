@@ -17,3 +17,9 @@
   /* Font */
   --form-input-font-size: 24px;
 }
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
