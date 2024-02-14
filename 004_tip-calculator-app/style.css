@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
   margin: 0;
+
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
 }
 
 :root {
