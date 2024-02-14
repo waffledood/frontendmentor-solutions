@@ -74,3 +74,16 @@ main {
 
   height: 80px;
 }
+
+.tip-amount-predef-value {
+  padding: 4px;
+
+  width: 30%;
+
+  text-align: center;
+
+  color: var(--sec-white);
+  background-color: var(--sec-very-dark-cyan);
+
+  border-radius: 4px;
+}
