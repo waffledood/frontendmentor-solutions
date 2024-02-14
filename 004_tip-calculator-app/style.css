@@ -2,3 +2,18 @@
   box-sizing: border-box;
   margin: 0;
 }
+
+:root {
+  /* Colors */
+  --pri-strong-cyan: hsl(172, 67%, 45%);
+
+  --sec-very-dark-cyan: hsl(183, 100%, 15%);
+  --sec-dark-grayish-cyan: hsl(186, 14%, 43%);
+  --sec-grayish-cyan: hsl(184, 14%, 56%);
+  --sec-light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --sec-white: hsl(0, 0%, 100%);
+
+  /* Font */
+  --form-input-font-size: 24px;
+}
