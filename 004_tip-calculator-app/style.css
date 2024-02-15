@@ -126,3 +126,8 @@ h4 {
   text-align: center;
   font-style: normal;
 }
+
+/* For all placeholders in input elements */
+::placeholder {
+  text-align: center;
+}
