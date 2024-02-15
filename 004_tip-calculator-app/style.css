@@ -45,13 +45,13 @@ main {
   align-items: center;
   justify-content: space-between;
 
-  height: 400px;
-  width: 900px;
+  height: 481px;
+  width: 920px;
 
   padding: 32px;
 
   background-color: var(--sec-white);
-  border-radius: 24px;
+  border-radius: 25px;
 }
 
 #bill-config {
