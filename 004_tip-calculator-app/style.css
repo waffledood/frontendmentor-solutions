@@ -99,3 +99,18 @@ h4 {
 
   border-radius: 5px;
 }
+
+.input-icon {
+  position: relative;
+}
+
+.input-icon > img {
+  position: absolute;
+  display: block;
+  transform: translate(0, -50%);
+  top: 50%;
+  pointer-events: none;
+  margin-left: 16px;
+  text-align: center;
+  font-style: normal;
+}
