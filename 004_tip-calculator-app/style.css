@@ -65,6 +65,10 @@ main {
   padding: 16px;
 }
 
+h4 {
+  color: var(--sec-dark-grayish-cyan);
+}
+
 #tip-amount {
   display: flex;
   flex-direction: row;
