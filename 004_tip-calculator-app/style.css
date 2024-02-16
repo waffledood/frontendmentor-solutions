@@ -137,6 +137,16 @@ main {
   outline: none;
 }
 
+.input-error {
+  border: 2px var(--sec-red) solid;
+  outline: none;
+}
+
+.input-error:focus {
+  border: 2px var(--sec-red) solid;
+  outline: none;
+}
+
 .input-icon {
   position: relative;
 
