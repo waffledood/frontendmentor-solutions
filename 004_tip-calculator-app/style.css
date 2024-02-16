@@ -158,6 +158,10 @@ input[type="number"] {
 }
 
 /* For all placeholders in input elements */
+.input::placeholder {
+  color: var(--sec-grayish-cyan);
+}
+
 #custom-tip-amount::placeholder {
   text-align: center;
 }
