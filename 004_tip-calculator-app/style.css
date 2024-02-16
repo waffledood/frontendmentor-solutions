@@ -118,6 +118,11 @@ h4 {
   background-color: var(--very-light-grayish-cyan);
 }
 
+.input:focus {
+  border: 2px var(--pri-strong-cyan) solid;
+  outline: none;
+}
+
 .input-icon {
   position: relative;
 
