@@ -17,6 +17,7 @@
   --sec-light-grayish-cyan: hsl(185, 41%, 84%);
   --very-light-grayish-cyan: hsl(189, 41%, 97%);
   --sec-white: hsl(0, 0%, 100%);
+  --sec-red: hsl(13, 70%, 61%);
 
   /* Font */
   --form-input-font-size: 24px;
@@ -65,8 +66,17 @@ main {
   padding: 16px;
 }
 
-h4 {
+.section-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
   color: var(--sec-dark-grayish-cyan);
+}
+
+.input-error-text {
+  color: var(--sec-red);
 }
 
 #tip-amount {
