@@ -118,6 +118,8 @@ h4 {
 
 .input-icon {
   position: relative;
+
+  margin-top: 6px;
 }
 
 .input-icon > img {
@@ -134,4 +136,14 @@ h4 {
 /* For all placeholders in input elements */
 ::placeholder {
   text-align: center;
+}
+
+/*  */
+
+#tip-details {
+  width: 48%;
+
+  padding: 32px;
+
+  border-radius: 24px;
 }
