@@ -20,6 +20,8 @@
   --sec-white: hsl(0, 0%, 100%);
   --sec-red: hsl(13, 70%, 61%);
 
+  --sec-disabled: hsl(183, 78%, 24%);
+
   /* Font */
   --form-input-font-size: 24px;
 }
@@ -250,6 +252,7 @@ input[type="number"] {
   height: 48px;
 
   background-color: var(--pri-strong-cyan);
+  color: var(--sec-very-dark-cyan);
 
   border: none;
   border-radius: 5px;
@@ -257,4 +260,16 @@ input[type="number"] {
   font-size: 20px;
 
   text-transform: uppercase;
+}
+
+#reset-button:hover {
+  background-color: var(--pri-cyan);
+
+  transition: background-color 0.4s;
+}
+
+#reset-button:disabled,
+#reset-button[disabled] {
+  background-color: var(--sec-disabled);
+  cursor: not-allowed;
 }
