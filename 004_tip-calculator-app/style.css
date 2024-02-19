@@ -217,6 +217,34 @@ input[type="number"] {
   border-radius: 15px;
 }
 
+#tip-results {
+  width: 100%;
+}
+
+#tip-result-amount {
+  margin-bottom: 30px;
+}
+
+.tip-col {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tip-section-heading {
+  color: var(--sec-white);
+}
+
+.per-person-subheading {
+  color: var(--sec-grayish-cyan);
+}
+
+.value {
+  color: var(--pri-strong-cyan);
+  font-size: 48px;
+}
+
 #reset-button {
   width: 333px;
   height: 48px;
