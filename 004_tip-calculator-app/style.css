@@ -140,9 +140,12 @@ main {
   background-color: var(--very-light-grayish-cyan);
 }
 
-.input:focus {
+.input:focus,
+.input:hover {
   border: 2px var(--pri-strong-cyan) solid;
   outline: none;
+
+  transition: border 0.1s;
 }
 
 .input-error {
