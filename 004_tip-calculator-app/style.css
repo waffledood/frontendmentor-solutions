@@ -10,6 +10,7 @@
 :root {
   /* Colors */
   --pri-strong-cyan: hsl(172, 67%, 45%);
+  --pri-cyan: hsl(173, 61%, 77%);
 
   --sec-very-dark-cyan: hsl(183, 100%, 15%);
   --sec-dark-grayish-cyan: hsl(186, 14%, 43%);
@@ -108,6 +109,13 @@ main {
   background-color: var(--sec-very-dark-cyan);
 
   border-radius: 5px;
+}
+
+.tip-amount-predef-value:hover {
+  color: var(--sec-very-dark-cyan);
+  background-color: var(--pri-cyan);
+
+  cursor: pointer;
 }
 
 .w-100 {
