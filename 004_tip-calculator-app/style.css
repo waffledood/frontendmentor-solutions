@@ -206,5 +206,18 @@ input[type="number"] {
 
   padding: 32px;
 
-  border-radius: 24px;
+}
+
+#reset-button {
+  width: 333px;
+  height: 48px;
+
+  background-color: var(--pri-strong-cyan);
+
+  border: none;
+  border-radius: 5px;
+
+  font-size: 20px;
+
+  text-transform: uppercase;
 }
