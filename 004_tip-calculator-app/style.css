@@ -104,6 +104,21 @@ input[type="radio"]:checked + label {
   background-color: var(--pri-strong-cyan);
 }
 
+.tip-amount-custom-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 4px;
+
+  height: 48px;
+  width: 117px;
+
+  background-color: var(--very-light-grayish-cyan);
+
+  border-radius: 5px;
+}
+
 .tip-amount-predef-value {
   display: flex;
   align-items: center;
