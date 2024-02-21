@@ -221,6 +221,23 @@ input[type="number"] {
   color: var(--sec-grayish-cyan);
 }
 
+#custom-tip-amount {
+  width: 100%;
+
+  color: var(--sec-very-dark-cyan);
+
+  font-size: 24px;
+
+  text-align: right;
+
+  height: 44px;
+  width: 113px;
+
+  border-radius: 4px;
+  border: none;
+  background-color: var(--very-light-grayish-cyan);
+}
+
 #custom-tip-amount::placeholder {
   text-align: center;
 }
