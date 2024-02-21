@@ -7,9 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function initCustomTipInput() {
   const customTipAmountInput = document.getElementById("custom-tip-amount");
+
   customTipAmountInput.addEventListener("click", (event) => {
     const percentCustomInput = document.getElementById("percent-custom");
     percentCustomInput.checked = true;
+  });
+
+  customTipAmountInput.addEventListener("blur", (event) => {
+    customTipAmountInput.value = 0;
   });
 }
 
