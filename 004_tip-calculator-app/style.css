@@ -95,6 +95,15 @@ main {
   width: 379px;
 }
 
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + label {
+  color: var(--sec-very-dark-cyan);
+  background-color: var(--pri-strong-cyan);
+}
+
 .tip-amount-predef-value {
   display: flex;
   align-items: center;
