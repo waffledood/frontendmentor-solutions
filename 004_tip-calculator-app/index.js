@@ -1,8 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
+  initCustomTipInput();
   validateNumberInputs();
 
   // TODO - When computing the final tip amount & total bill per person, prevent computation when input fields have error
 });
+
+function initCustomTipInput() {
+  const customTipAmountInput = document.getElementById("custom-tip-amount");
+  customTipAmountInput.addEventListener("click", (event) => {
+    const percentCustomInput = document.getElementById("percent-custom");
+    percentCustomInput.checked = true;
+  });
+}
 
 function validateNumberInputs() {
   const billInputValueElement = document.getElementById("bill-input-value");
