@@ -14,7 +14,12 @@ function initCustomTipInput() {
   });
 
   customTipAmountInput.addEventListener("blur", (event) => {
-    customTipAmountInput.value = 0;
+    if (!customTipAmountInput.value) {
+      customTipAmountInput.value = 0;
+    } else {
+      document.getElementById("percent-custom").value =
+        customTipAmountInput.value;
+    }
   });
 }
 
