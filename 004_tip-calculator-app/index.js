@@ -108,5 +108,9 @@ function calculate() {
 
     const tipAmountValueElement = document.getElementById("tip-amount-value");
     tipAmountValueElement.innerHTML = `${tipPerPerson}`;
+
+    // Make Reset button selectable
+    const resetButton = document.getElementById("reset-button");
+    resetButton.disabled = false;
   }
 }
