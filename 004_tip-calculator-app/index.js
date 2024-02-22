@@ -1,9 +1,39 @@
 document.addEventListener("DOMContentLoaded", function () {
+  initResetButton();
   initCustomTipInput();
   validateNumberInputs();
 
   // TODO - When computing the final tip amount & total bill per person, prevent computation when input fields have error
 });
+
+function initResetButton() {
+  const resetButton = document.getElementById("reset-button");
+  resetButton.addEventListener("click", (event) => {
+    // Disable reset button
+    resetButton.disabled = true;
+
+    // Clear all input fields & calculated bill & tip values
+    const billInputValue = document.getElementById("bill-input-value");
+    billInputValue.value = "";
+
+    const tipElement = document.querySelector('input[name="percent"]:checked');
+    tipElement.checked = false;
+
+    const customTipAmount = document.getElementById("custom-tip-amount");
+    customTipAmount.value = "";
+
+    const numberOfPeopleValue = document.getElementById(
+      "number-of-people-value"
+    );
+    numberOfPeopleValue.value = "";
+
+    const tipAmountValueElement = document.getElementById("tip-amount-value");
+    tipAmountValueElement.innerHTML = "$0.00";
+
+    const billTotalValueElement = document.getElementById("bill-total-value");
+    billTotalValueElement.innerHTML = "$0.00";
+  });
+}
 
 function initCustomTipInput() {
   const customTipAmountInput = document.getElementById("custom-tip-amount");
