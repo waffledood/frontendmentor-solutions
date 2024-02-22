@@ -98,10 +98,13 @@
             <img src="./images/icon-person.svg" alt="" />
             <input
               type="number"
+              min="0"
+              step="1"
               name=""
               id="number-of-people-value"
               class="input w-100 pad-r"
               placeholder="0"
+              onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57"
             />
           </div>
         </div>
