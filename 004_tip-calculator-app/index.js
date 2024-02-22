@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  initPredefinedTips();
   initResetButton();
   initCustomTipInput();
   validateNumberInputs();
@@ -32,6 +33,17 @@ function initResetButton() {
 
     const billTotalValueElement = document.getElementById("bill-total-value");
     billTotalValueElement.innerHTML = "$0.00";
+  });
+}
+
+function initPredefinedTips() {
+  const radioButtons = document.getElementsByName("percent");
+  [...radioButtons].forEach((radioButton) => {
+    if (radioButton.id !== "percent-custom") {
+      radioButton.addEventListener("click", (event) => {
+        calculate();
+      });
+    }
   });
 }
 
