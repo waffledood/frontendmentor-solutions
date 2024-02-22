@@ -20,6 +20,9 @@ function initCustomTipInput() {
       document.getElementById("percent-custom").value =
         customTipAmountInput.value;
     }
+
+    // Calculate bill & tip
+    calculate();
   });
 }
 
@@ -40,6 +43,9 @@ function validateNumberInputs() {
       // Remove input-error class & make error message hidden if input is valid
       billInputValueElement.classList.remove("input-error");
       billInputValueErrorMessageElement.hidden = true;
+
+      // Calculate bill & tip
+      calculate();
     }
   });
 
@@ -61,6 +67,9 @@ function validateNumberInputs() {
       // Remove input-error class & make error message hidden if input is valid
       numberOfPeopleValueElement.classList.remove("input-error");
       numberOfPeopleValueErrorMessageElement.hidden = true;
+
+      // Calculate bill & tip
+      calculate();
     }
   });
 }
