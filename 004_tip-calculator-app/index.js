@@ -64,3 +64,40 @@ function validateNumberInputs() {
     }
   });
 }
+
+function calculate() {
+  // Retrieve bill value
+  const billInputValue = Number(
+    document.querySelector("#bill-input-value").value
+  );
+
+  const tipElement = document.querySelector('input[name="percent"]:checked');
+  var tipValue;
+  if (tipElement) {
+    tipValue = Number(tipElement.value);
+  }
+
+  // Retrieve numer of people value
+  const numberOfPeopleInputValue = Number(
+    document.querySelector("#number-of-people-value").value
+  );
+
+  // Calculate the bill & tip amount per person if the required values are input
+  if (billInputValue && tipValue && numberOfPeopleInputValue) {
+    // Calculate & show the total bill per person
+    const totalBillValue = billInputValue * (1 + tipValue / 100);
+    const billPerPerson = (totalBillValue / numberOfPeopleInputValue).toFixed(
+      2
+    );
+
+    const billTotalValueElement = document.getElementById("bill-total-value");
+    billTotalValueElement.innerHTML = `$${billPerPerson}`;
+
+    // Calculate & show the total tip per person
+    const totalTipValue = (tipValue / 100) * billInputValue;
+    const tipPerPerson = (totalTipValue / numberOfPeopleInputValue).toFixed(2);
+
+    const tipAmountValueElement = document.getElementById("tip-amount-value");
+    tipAmountValueElement.innerHTML = `${tipPerPerson}`;
+  }
+}
