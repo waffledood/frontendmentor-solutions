@@ -25,10 +25,10 @@ function validateNumberInputs() {
   );
 
   billInputValueElement.addEventListener("focusout", (event) => {
-    const numberOfPeopleInputValue = event.target.value;
+    const billInputValue = event.target.value;
 
     // Add input-error class to input & make error message visible if input is invalid
-    if (numberOfPeopleInputValue === 0 || numberOfPeopleInputValue === "") {
+    if (billInputValue === 0 || billInputValue === "") {
       billInputValueElement.classList.add("input-error");
       billInputValueErrorMessageElement.hidden = false;
     } else {
