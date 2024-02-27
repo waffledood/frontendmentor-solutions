@@ -43,6 +43,12 @@ body {
   background-color: var(--sec-light-grayish-cyan);
 }
 
+.fixed {
+  position: fixed;
+  top: 12.5%;
+  left: 48%;
+}
+
 main {
   display: flex;
   flex-direction: row;
@@ -238,6 +244,10 @@ input[type="number"] {
   background-color: var(--very-light-grayish-cyan);
 }
 
+#custom-tip-amount:hover {
+  cursor: pointer;
+}
+
 #custom-tip-amount::placeholder {
   text-align: center;
 }
@@ -305,6 +315,8 @@ input[type="number"] {
 
 #reset-button:hover {
   background-color: var(--pri-cyan);
+
+  cursor: pointer;
 
   transition: background-color 0.4s;
 }
