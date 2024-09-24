@@ -189,3 +189,7 @@ body {
   grid-area: content-8;
   background-color: var(--yellow-500);
 }
+
+#five-stars {
+  height: 32px;
+}
