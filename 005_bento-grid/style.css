@@ -20,6 +20,20 @@
   --sp-100: 8px;
 }
 
+/* Color classes */
+.color-white {
+  color: var(--white);
+}
+
+.color-yellow {
+  color: var(--yellow-500);
+}
+
+.color-purple {
+  color: var(--purple-500);
+}
+
+/* Padding */
 .p-24 {
   padding: 24px;
 }
