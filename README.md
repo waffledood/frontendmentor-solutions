@@ -25,3 +25,9 @@ This repository contains my attempts to the different challenges on [Frontend Me
    Challenge page: [link](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX/hub)
 
    My attempt: [link](https://waffledood.github.io/frontendmentor-solutions/004_tip-calculator-app)
+
+5. Bento grid app
+
+   Challenge page: [link](https://www.frontendmentor.io/challenges/bento-grid-RMydElrlOj/hub)
+
+   My attempt: [link](https://waffledood.github.io/frontendmentor-solutions/005_bento-grid)
