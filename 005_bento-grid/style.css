@@ -3,6 +3,64 @@
   margin: 0;
 }
 
+:root {
+  /* Colors */
+  --purple-100: hsl(254, 88%, 90%);
+  --purple-500: hsl(256, 67%, 59%);
+  --yellow-100: hsl(31, 66%, 93%);
+  --yellow-500: hsl(39, 100%, 71%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 7%);
+
+  /* Spacing */
+  --sp-500: 40px;
+  --sp-400: 32px;
+  --sp-300: 24px;
+  --sp-200: 16px;
+  --sp-100: 8px;
+}
+
+/* Typography */
+.text-preset-1 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 62px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 93.5%;
+  letter-spacing: -3px;
+}
+
+.text-preset-2 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 40px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 90%;
+  letter-spacing: -2px;
+}
+
+.text-preset-3 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 32px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 87.5%;
+  letter-spacing: -2px;
+}
+
+.text-preset-4 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 111%;
+  letter-spacing: 0px;
+}
+
 body {
   height: 100vh;
   width: 100vw;
