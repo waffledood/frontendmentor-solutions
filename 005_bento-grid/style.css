@@ -68,9 +68,54 @@ body {
   width: 100vw;
 
   padding: 8vh 10vw;
+}
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.bento-grid {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  gap: 1.5vw;
+  padding: 1vw;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "content-7 content-1 content-1 content-4"
+    "content-7 content-1 content-1 content-4"
+    "content-7 content-2 content-3 content-4"
+    "content-8 content-2 content-3 content-4"
+    "content-8 content-6 content-5 content-5"
+    "content-8 content-6 content-5 content-5 ";
+}
+
+#content-1 {
+  grid-area: content-1;
+}
+
+#content-2 {
+  grid-area: content-2;
+}
+
+#content-3 {
+  grid-area: content-3;
+}
+
+#content-4 {
+  grid-area: content-4;
+}
+
+#content-5 {
+  grid-area: content-5;
+}
+
+#content-6 {
+  grid-area: content-6;
+}
+
+#content-7 {
+  grid-area: content-7;
+}
+
+#content-8 {
+  grid-area: content-8;
 }
