@@ -102,32 +102,40 @@ body {
 
 #content-1 {
   grid-area: content-1;
+  background-color: var(--purple-500);
 }
 
 #content-2 {
   grid-area: content-2;
+  background-color: var(--white);
 }
 
 #content-3 {
   grid-area: content-3;
+  background-color: var(--yellow-500);
 }
 
 #content-4 {
   grid-area: content-4;
+  background-color: var(--purple-100);
 }
 
 #content-5 {
   grid-area: content-5;
+  background-color: var(--purple-500);
 }
 
 #content-6 {
   grid-area: content-6;
+  background-color: var(--white);
 }
 
 #content-7 {
   grid-area: content-7;
+  background-color: var(--yellow-100);
 }
 
 #content-8 {
   grid-area: content-8;
+  background-color: var(--yellow-500);
 }
