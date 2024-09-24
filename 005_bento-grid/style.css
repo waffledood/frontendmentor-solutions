@@ -20,6 +20,14 @@
   --sp-100: 8px;
 }
 
+.p-24 {
+  padding: 24px;
+}
+
+.p-32 {
+  padding: 32px;
+}
+
 /* Typography */
 .text-preset-1 {
   font-family: "DM Sans", sans-serif;
