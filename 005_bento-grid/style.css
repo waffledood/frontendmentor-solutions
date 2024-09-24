@@ -42,6 +42,15 @@
   padding: 32px;
 }
 
+/* Alignment */
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
 /* Typography */
 .text-preset-1 {
   font-family: "DM Sans", sans-serif;
