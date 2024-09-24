@@ -194,6 +194,11 @@ body {
   background-color: var(--yellow-500);
 }
 
+/* img specific id's */
 #five-stars {
   height: 32px;
+}
+
+#create-post {
+  width: 100%;
 }
