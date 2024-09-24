@@ -68,6 +68,10 @@
   align-items: center;
 }
 
+.flex-align-items-left {
+  align-items: flex-start;
+}
+
 .flex-justify-content-center {
   justify-content: center;
 }
@@ -145,7 +149,7 @@ body {
     "content-7 content-2 content-3 content-4"
     "content-8 content-2 content-3 content-4"
     "content-8 content-6 content-5 content-5"
-    "content-8 content-6 content-5 content-5 ";
+    "content-8 content-6 content-5 content-5";
 }
 
 .bento-box {
@@ -200,5 +204,9 @@ body {
 }
 
 #create-post {
+  width: 100%;
+}
+
+#ai-content {
   width: 100%;
 }
