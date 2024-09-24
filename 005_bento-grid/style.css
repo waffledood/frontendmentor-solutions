@@ -88,6 +88,10 @@ body {
     "content-8 content-6 content-5 content-5 ";
 }
 
+.bento-box {
+  border-radius: 10px;
+}
+
 #content-1 {
   grid-area: content-1;
 }
