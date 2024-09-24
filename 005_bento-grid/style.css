@@ -51,6 +51,31 @@
   text-align: left;
 }
 
+/* Flex */
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.flex-direction-row {
+  flex-direction: row;
+}
+
+.flex-align-items-center {
+  align-items: center;
+}
+
+.flex-justify-content-center {
+  justify-content: center;
+}
+
+.flex-justify-content-space-between {
+  justify-content: space-between;
+}
+
+.gap-24 {
+  gap: 24px;
+}
+
 /* Typography */
 .text-preset-1 {
   font-family: "DM Sans", sans-serif;
@@ -121,6 +146,8 @@ body {
 
 .bento-box {
   border-radius: 10px;
+
+  display: flex;
 }
 
 #content-1 {
