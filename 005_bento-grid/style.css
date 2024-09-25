@@ -234,6 +234,10 @@ body {
   max-width: 208px;
 }
 
+#schedule-posts {
+  width: 140%;
+}
+
 #grow-followers {
   height: 100%;
 }
