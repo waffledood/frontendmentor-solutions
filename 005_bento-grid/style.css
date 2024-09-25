@@ -216,6 +216,10 @@ body {
   box-shadow: -4px 4px 10px rgba(175, 174, 174, 0.1);
 }
 
+#schedule {
+  width: 100%;
+}
+
 #grow-followers {
   height: 100%;
 }
