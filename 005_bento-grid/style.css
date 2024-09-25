@@ -140,7 +140,7 @@ body {
   width: 100vw;
 
   /* TODO - Removing this padding fixes grid overflow */
-  padding: 3vh 6vw;
+  padding: 3vh 6vh;
 
   display: flex;
   flex-direction: column;
@@ -226,7 +226,8 @@ body {
 }
 
 #schedule {
-  width: 100%;
+  width: 90%;
+  max-width: 208px;
 }
 
 #grow-followers {
@@ -235,12 +236,15 @@ body {
 
 #audience-growth {
   width: 85%;
+  max-width: 180px;
 }
 
 #create-post {
   width: 100%;
+  max-width: 180px;
 }
 
 #ai-content {
-  width: 100%;
+  width: 85%;
+  max-width: 200px;
 }
