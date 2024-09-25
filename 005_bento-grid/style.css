@@ -132,7 +132,7 @@ body {
   width: 100vw;
 
   /* TODO - Removing this padding fixes grid overflow */
-  padding: 8vh 10vw;
+  padding: 3vh 6vw;
 }
 
 .bento-grid {
