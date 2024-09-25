@@ -186,6 +186,7 @@ body {
 #content-3 {
   grid-area: content-3;
   background-color: var(--yellow-500);
+  overflow: hidden;
 }
 
 #content-4 {
