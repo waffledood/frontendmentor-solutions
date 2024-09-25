@@ -204,6 +204,10 @@ body {
   height: 32px;
 }
 
+#audience-growth {
+  width: 100%;
+}
+
 #create-post {
   width: 100%;
 }
