@@ -196,6 +196,7 @@ body {
 #content-4 {
   grid-area: content-4;
   background-color: var(--purple-100);
+  overflow: hidden;
 }
 
 #content-5 {
