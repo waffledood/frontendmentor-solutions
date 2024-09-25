@@ -148,7 +148,7 @@ body {
   gap: 1.5vw;
   padding: 1vw;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: repeat(6, 1fr);
   grid-template-areas:
     "content-7 content-1 content-1 content-4"
     "content-7 content-1 content-1 content-4"
