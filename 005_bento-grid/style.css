@@ -237,6 +237,7 @@ body {
 
 #schedule-posts {
   width: 140%;
+  max-width: 280px;
 }
 
 #grow-followers {
