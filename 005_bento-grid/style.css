@@ -209,6 +209,10 @@ body {
   height: 32px;
 }
 
+#grow-followers {
+  height: 100%;
+}
+
 #audience-growth {
   width: 100%;
 }
