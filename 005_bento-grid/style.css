@@ -92,6 +92,10 @@
   gap: 24px;
 }
 
+.gap-4-pt {
+  gap: 4%;
+}
+
 /* Typography */
 .text-preset-1 {
   font-family: "DM Sans", sans-serif;
