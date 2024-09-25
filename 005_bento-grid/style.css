@@ -76,8 +76,16 @@
   justify-content: center;
 }
 
+.flex-justify-content-start {
+  justify-content: flex-start;
+}
+
 .flex-justify-content-space-between {
   justify-content: space-between;
+}
+
+.gap-16 {
+  gap: 16px;
 }
 
 .gap-24 {
