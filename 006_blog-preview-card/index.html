@@ -53,6 +53,10 @@
         background-color: var(--yellow);
         font-family: "Figtree", sans-serif;
         font-weight: 500;
+
+        @media (max-width: 375px) {
+          font-size: 12px;
+        }
       }
 
       .tag {
@@ -80,10 +84,20 @@
         max-width: 384px;
 
         box-shadow: 8px 8px 0 0 var(--gray-950);
+
+        @media (max-width: 375px) {
+          width: 327px;
+        }
       }
 
       img {
         border-radius: 10px;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .card-image {
+        width: 100%;
       }
 
       .card-body {
@@ -96,6 +110,10 @@
       .title {
         font-size: 24px;
         font-weight: 800;
+
+        @media (max-width: 375px) {
+          font-size: 20px;
+        }
       }
 
       .card-author {
@@ -113,7 +131,10 @@
 
       .paragraph {
         color: var(--gray-500);
-        font-size: 16px;
+
+        @media (max-width: 375px) {
+          font-size: 14px;
+        }
       }
     </style>
   </head>
