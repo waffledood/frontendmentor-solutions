@@ -87,21 +87,28 @@
         font-style: normal;
       }
 
+      @media (max-width: 768px) {
+        body {
+          padding: 80px 54px;
+        }
+      }
+
+      @media (max-width: 375px) {
+        body {
+          padding: 56px 30px 46px;
+          gap: 60px;
+        }
+      }
+
       body {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
+        gap: 74px;
+
         padding: 102px 163px 163px;
-
-        @media (max-width: 768px) {
-          padding: 80px 54px;
-        }
-
-        @media (max-width: 375px) {
-          padding: 56px 30px 46px;
-        }
       }
 
       #title-wrapper {
