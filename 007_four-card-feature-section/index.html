@@ -116,9 +116,20 @@
         text-align: center;
       }
 
+      #card-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+          "supervisor builder calculator"
+          "supervisor karma calculator";
+        align-items: center;
+
+        gap: 32px;
+      }
+
       .card {
         height: 250px;
-        width: 350px;
+        width: 315px;
 
         border-radius: 8px;
 
@@ -151,6 +162,11 @@
 
         #card-wrapper {
           grid-template-columns: 1fr 1fr;
+          grid-template-areas:
+            "builder builder"
+            "supervisor karma"
+            "calculator calculator";
+          justify-items: center;
         }
       }
 
