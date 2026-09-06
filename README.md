@@ -31,3 +31,15 @@ This repository contains my attempts to the different challenges on [Frontend Me
    Challenge page: [link](https://www.frontendmentor.io/challenges/bento-grid-RMydElrlOj/hub)
 
    My attempt: [link](https://waffledood.github.io/frontendmentor-solutions/005_bento-grid)
+
+6. Blog preview card
+
+   Challenge page: [link](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS)
+
+   My attempt: [link](https://waffledood.github.io/frontendmentor-solutions/006_blog-preview-card/)
+
+7. Four card feature section
+
+   Challenge page: [link](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK)
+
+   My attempt: [link](https://waffledood.github.io/frontendmentor-solutions/007_four-card-feature-section/)
