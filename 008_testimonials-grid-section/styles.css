@@ -106,3 +106,20 @@
 .card--grey .card__status {
   color: var(--grey-100);
 }
+
+.card--dark-blue {
+  background-color: var(--dark-blue);
+}
+
+.card--dark-blue .card__name,
+.card--dark-blue .card__status {
+  color: var(--white);
+}
+
+.card--dark-blue .card__title {
+  color: var(--grey-200);
+}
+
+.card--dark-blue .card__text {
+  color: var(--grey-100);
+}
