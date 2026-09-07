@@ -78,3 +78,17 @@
   flex-direction: column;
   gap: 16px;
 }
+
+.card--purple {
+  background-color: var(--purple-500);
+}
+
+.card--purple .card__title,
+.card--purple .card__name {
+  color: var(--white);
+}
+
+.card--purple .card__text,
+.card--purple .card__status {
+  color: var(--purple-50);
+}
