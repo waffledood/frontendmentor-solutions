@@ -47,6 +47,35 @@
   line-height: 110%;
 }
 
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira";
+  gap: 32px;
+}
+
+.card--daniel {
+  grid-area: daniel;
+}
+
+.card--jonathan {
+  grid-area: jonathan;
+}
+
+.card--jeanette {
+  grid-area: jeanette;
+}
+
+.card--patrick {
+  grid-area: patrick;
+}
+
+.card--kira {
+  grid-area: kira;
+}
+
 .card {
   display: flex;
   flex-direction: column;
