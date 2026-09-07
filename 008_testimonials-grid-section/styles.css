@@ -16,3 +16,33 @@
   --purple-300: hsl(264, 82%, 70%);
   --purple-500: hsl(263, 55%, 52%);
 }
+
+.text-preset-1 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 120%;
+}
+
+.text-preset-2 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 110%;
+}
+
+.text-preset-3 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 140%;
+}
+
+.text-preset-4 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 11px;
+  line-height: 110%;
+}
