@@ -92,3 +92,17 @@
 .card--purple .card__status {
   color: var(--purple-50);
 }
+
+.card--grey {
+  background-color: var(--grey-500);
+}
+
+.card--grey .card__title,
+.card--grey .card__name {
+  color: var(--white);
+}
+
+.card--grey .card__text,
+.card--grey .card__status {
+  color: var(--grey-100);
+}
