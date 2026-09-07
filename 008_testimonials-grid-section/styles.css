@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  font-size: 13px;
+}
+
 :root {
   --black: hsl(0, 0%, 7%);
   --dark-blue: hsl(219, 29%, 14%);
