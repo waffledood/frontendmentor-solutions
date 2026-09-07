@@ -107,6 +107,20 @@
   color: var(--grey-100);
 }
 
+.card--white {
+  background-color: var(--white);
+}
+
+.card--white .card__name,
+.card--white .card__title {
+  color: var(--grey-500);
+}
+
+.card--white .card__status,
+.card--white .card__text {
+  color: var(--grey-400);
+}
+
 .card--dark-blue {
   background-color: var(--dark-blue);
 }
