@@ -43,3 +43,9 @@ This repository contains my attempts to the different challenges on [Frontend Me
    Challenge page: [link](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK)
 
    My attempt: [link](https://waffledood.github.io/frontendmentor-solutions/007_four-card-feature-section/)
+
+8. Testimonials grid section
+
+   Challenge page: [link](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7)
+
+   My attempt: [link](https://waffledood.github.io/frontendmentor-solutions/008_testimonials-grid-section/)
