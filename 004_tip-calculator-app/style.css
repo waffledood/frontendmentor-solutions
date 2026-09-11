@@ -9,18 +9,24 @@
 
 :root {
   /* Colors */
-  --pri-strong-cyan: hsl(172, 67%, 45%);
-  --pri-cyan: hsl(173, 61%, 77%);
+  --white: hsl(0, 100%, 100%);
+  --black: hsl(0, 0%, 0%);
 
-  --sec-very-dark-cyan: hsl(183, 100%, 15%);
-  --sec-dark-grayish-cyan: hsl(186, 14%, 43%);
-  --sec-grayish-cyan: hsl(184, 14%, 56%);
-  --sec-light-grayish-cyan: hsl(185, 41%, 84%);
-  --very-light-grayish-cyan: hsl(189, 41%, 97%);
-  --sec-white: hsl(0, 0%, 100%);
-  --sec-red: hsl(13, 70%, 61%);
+  --grey-600: hsl(180, 25%, 32%);
+  --grey-550: hsl(180, 18%, 40%);
+  --grey-500: hsl(186, 14%, 43%);
+  --grey-400: hsl(184, 14%, 56%);
+  --grey-300: hsl(184, 19%, 68%);
+  --grey-200: hsl(185, 41%, 84%);
+  --grey-50: hsl(189, 47%, 97%);
 
-  --sec-disabled: hsl(183, 78%, 24%);
+  --green-900: hsl(183, 100%, 15%);
+  --green-800: hsl(183, 85%, 21%);
+  --green-750: hsl(183, 79%, 24%);
+  --green-400: hsl(172, 67%, 45%);
+  --green-200: hsl(173, 61%, 77%);
+
+  --orange-400: hsl(13, 70%, 60%);
 
   /* Font */
   --form-input-font-size: 24px;
