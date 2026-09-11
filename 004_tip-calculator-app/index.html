@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
       rel="stylesheet"
     />
 
@@ -107,7 +107,13 @@
               id="number-of-people-value"
               class="input w-100 pad-r"
               placeholder="0"
-              onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57"
+              onkeypress="
+                return event.charCode == 8 ||
+                  event.charCode == 0 ||
+                  event.charCode == 13
+                  ? null
+                  : event.charCode >= 48 && event.charCode <= 57;
+              "
             />
           </div>
         </div>
