@@ -91,12 +91,18 @@ main {
   border-radius: 25px;
 }
 
+.bill-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 .section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
     "heading error"
-    "field field";
+    "content content";
   gap: 8px;
 }
 
@@ -107,10 +113,11 @@ main {
 
 .section__error {
   grid-area: error;
+  text-align: right;
 }
 
 .field {
-  grid-area: field;
+  grid-area: content;
 
   display: flex;
   flex-direction: row;
@@ -149,8 +156,28 @@ main {
   -moz-appearance: textfield;
 }
 
-.bill-section {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+.pills {
+  grid-area: content;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  width: 100%;
+}
+
+.pill {
+  border-radius: 5px;
+  background-color: var(--green-900);
+
+  text-align: center;
+
+  padding: 8px 16px;
+
+  color: var(--white);
+}
+
+.pill-custom {
+  color: var(--grey-550);
+  background-color: var(--grey-50);
 }
