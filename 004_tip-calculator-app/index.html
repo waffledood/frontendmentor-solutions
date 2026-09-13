@@ -22,7 +22,7 @@
 
     <link rel="stylesheet" href="./style.css" />
 
-    <script src="./index.js"></script>
+    <!-- <script src="./index.js"></script> -->
 
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
@@ -31,6 +31,32 @@
       <img src="./images/logo.svg" alt="" />
     </div>
     <main>
+      <div class="bill-section">
+        <div class="section">
+          <label for="bill-amount" class="section__heading text-preset-5"
+            >Bill</label
+          >
+          <span id="bill-amount-error" class="section__error"
+            >{Error message}</span
+          >
+          <div class="field">
+            <img
+              class="field__icon"
+              src="./images/icon-dollar.svg"
+              alt="dollar icon"
+            />
+            <input
+              id="bill-amount"
+              aria-describedby="bill-amount-error"
+              aria-invalid="false"
+              class="field__input"
+              type="number"
+              min="0"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="results-section"></div>
       <!-- tip values are built with radio inputs -->
     </main>
   </body>
