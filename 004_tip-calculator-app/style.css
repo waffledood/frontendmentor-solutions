@@ -166,6 +166,19 @@ main {
   width: 100%;
 }
 
+.pill__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.pill__input:checked + .pill {
+  background-color: var(--green-400);
+  color: var(--green-900);
+}
+
 .pill {
   border-radius: 5px;
   background-color: var(--green-900);
@@ -175,9 +188,18 @@ main {
   padding: 8px 16px;
 
   color: var(--white);
+
+  transition:
+    background-color 0.2s ease-out,
+    color 0.2s ease-out;
 }
 
-.pill-custom {
+.pill:hover {
+  color: var(--green-900);
+  background-color: var(--green-200);
+}
+
+.pill--custom {
   color: var(--grey-550);
   background-color: var(--grey-50);
 }
