@@ -32,6 +32,7 @@
     </div>
     <main>
       <div class="bill-section">
+        <!-- Bill -->
         <div class="section">
           <label for="bill-amount" class="section__heading text-preset-5"
             >Bill</label
@@ -52,6 +53,36 @@
               class="field__input text-preset-3"
               type="number"
               min="0"
+              placeholder="0"
+            />
+          </div>
+        </div>
+
+        <!-- Tip Section -->
+
+        <!-- People Section -->
+        <div class="section">
+          <label for="people-count" class="section__heading text-preset-5"
+            >Number of People</label
+          >
+          <span id="people-count-error" class="section__error"
+            >Hidden error message</span
+          >
+          <div class="field">
+            <img
+              class="field__icon"
+              src="./images/icon-person.svg"
+              alt="person icon"
+            />
+            <input
+              id="people-count"
+              aria-describedby="people-count-error"
+              aria-invalid="false"
+              class="field__input text-preset-3"
+              type="number"
+              min="0"
+              step="1"
+              placeholder="0"
             />
           </div>
         </div>

@@ -132,6 +132,11 @@ main {
   color: var(--green-900);
 }
 
+.field__input::placeholder {
+  color: var(--green-900);
+  opacity: 35%;
+}
+
 /* Hide stepper arrows of number input element: Chrome, Safari, Edge, Opera */
 .field__input::-webkit-outer-spin-button,
 .field__input::-webkit-inner-spin-button {
@@ -142,4 +147,10 @@ main {
 /* Hide stepper arrows of number input element: Firefox */
 .field__input[type="number"] {
   -moz-appearance: textfield;
+}
+
+.bill-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
