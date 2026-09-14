@@ -203,3 +203,55 @@ main {
   color: var(--grey-550);
   background-color: var(--grey-50);
 }
+
+.results-section {
+  background-color: var(--green-900);
+  padding: 24px 32px;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 128px;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.result {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 96px;
+}
+
+.result__label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.result__heading {
+  color: var(--white);
+}
+
+.result__subheading {
+  color: var(--grey-400);
+}
+
+.result__output {
+  color: var(--green-400);
+}
+
+.results__button {
+  color: var(--green-900);
+  background-color: var(--green-400);
+  border: 0px var(--green-400) solid;
+  border-radius: 5px;
+
+  padding: 8px 0px;
+
+  width: 100%;
+}

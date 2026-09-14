@@ -27,9 +27,9 @@
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
-    <div>
+    <!-- <div>
       <img src="./images/logo.svg" alt="" />
-    </div>
+    </div> -->
     <main>
       <div class="bill-section">
         <!-- Bill -->
@@ -152,8 +152,27 @@
           </div>
         </div>
       </div>
-      <div class="results-section"></div>
-      <!-- tip values are built with radio inputs -->
+
+      <div class="results-section">
+        <div class="results">
+          <div class="result">
+            <div class="result__label">
+              <span class="result__heading text-preset-5">Tip amount</span>
+              <span class="result__subheading text-preset-6">/ person</span>
+            </div>
+            <output class="result__output text-preset-1">$4.27</output>
+          </div>
+
+          <div class="result">
+            <div class="result__label">
+              <span class="result__heading text-preset-5">Total</span>
+              <span class="result__subheading text-preset-6">/ person</span>
+            </div>
+            <output class="result__output text-preset-1">$32.79</output>
+          </div>
+        </div>
+        <button class="results__button text-preset-4">Reset</button>
+      </div>
     </main>
   </body>
 </html>
