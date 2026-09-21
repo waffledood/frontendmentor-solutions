@@ -255,4 +255,6 @@ main {
   padding: 8px 0px;
 
   width: 100%;
+
+  text-transform: uppercase;
 }
