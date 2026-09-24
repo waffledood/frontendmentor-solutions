@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -16,123 +16,165 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="./style.css" />
 
-    <script src="./index.js"></script>
+    <script src="./index.js" defer></script>
 
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
-    <div class="fixed">
+    <!-- <div>
       <img src="./images/logo.svg" alt="" />
-    </div>
+    </div> -->
     <main>
-      <div id="bill-config">
-        <div id="bill-section">
-          <div class="section-heading">
-            <h4>Bill</h4>
-            <span
-              id="bill-input-value-error-message"
-              class="input-error-text"
-              hidden
-              >Can't be zero</span
-            >
-          </div>
-          <div class="input-icon">
-            <img src="./images/icon-dollar.svg" alt="" />
+      <div class="bill-section">
+        <!-- Bill -->
+        <div class="section">
+          <label for="bill-amount" class="section__heading text-preset-5"
+            >Bill</label
+          >
+          <span id="bill-amount-error" class="section__error"
+            >Hidden error message</span
+          >
+          <div class="field">
+            <img
+              class="field__icon"
+              src="./images/icon-dollar.svg"
+              alt="dollar icon"
+            />
             <input
+              id="bill-amount"
+              aria-describedby="bill-amount-error"
+              aria-invalid="false"
+              class="field__input text-preset-3"
               type="number"
+              inputmode="decimal"
               min="0"
-              name=""
-              id="bill-input-value"
-              class="input w-100 pad-r"
+              step="0.01"
               placeholder="0"
             />
           </div>
         </div>
 
-        <div id="tip-config-section">
-          <h4>Select Tip %</h4>
-          <div id="tip-amount">
-            <input type="radio" id="percent-5" name="percent" value="5" />
-            <label for="percent-5" class="tip-amount-predef-value">5%</label>
+        <!-- Tip Section -->
+        <div class="section">
+          <label for="tip-amount" class="section__heading text-preset-5"
+            >Select Tip %</label
+          >
+          <span id="tip-amount-error" class="section__error"
+            >Hidden error message</span
+          >
+          <div class="pills">
+            <input
+              class="pill__input"
+              type="radio"
+              id="5"
+              name="tip"
+              value="5"
+            />
+            <label class="pill text-preset-3" for="5">5%</label>
 
-            <input type="radio" id="percent-10" name="percent" value="10" />
-            <label for="percent-10" class="tip-amount-predef-value">10%</label>
+            <input
+              class="pill__input"
+              type="radio"
+              id="10"
+              name="tip"
+              value="10"
+            />
+            <label class="pill text-preset-3" for="10">10%</label>
 
-            <input type="radio" id="percent-15" name="percent" value="15" />
-            <label for="percent-15" class="tip-amount-predef-value">15%</label>
+            <input
+              class="pill__input"
+              type="radio"
+              id="15"
+              name="tip"
+              value="15"
+            />
+            <label class="pill text-preset-3" for="15">15%</label>
 
-            <input type="radio" id="percent-20" name="percent" value="20" />
-            <label for="percent-20" class="tip-amount-predef-value">20%</label>
+            <input
+              class="pill__input"
+              type="radio"
+              id="25"
+              name="tip"
+              value="25"
+            />
+            <label class="pill text-preset-3" for="25">25%</label>
 
-            <input type="radio" id="percent-50" name="percent" value="50" />
-            <label for="percent-50" class="tip-amount-predef-value">50%</label>
+            <input
+              class="pill__input"
+              type="radio"
+              id="50"
+              name="tip"
+              value="50"
+            />
+            <label class="pill text-preset-3" for="50">50%</label>
 
-            <input type="radio" id="percent-custom" name="percent" value="" />
-            <label for="percent-custom" class="tip-amount-custom-value">
-              <input
-                type="number"
-                class=""
-                min="0"
-                name=""
-                id="custom-tip-amount"
-                placeholder="Custom"
-              />
-            </label>
+            <input
+              class="pill__input"
+              type="radio"
+              id="tip-amount"
+              name="tip"
+              value="0"
+            />
+            <label class="pill pill--custom text-preset-3" for="tip-amount"
+              >Custom</label
+            >
           </div>
         </div>
 
-        <div id="people-section">
-          <div class="section-heading">
-            <h4>Number of People</h4>
-            <span
-              id="number-of-people-value-error-message"
-              class="input-error-text"
-              hidden
-              >Can't be zero</span
-            >
-          </div>
-          <div class="input-icon">
-            <img src="./images/icon-person.svg" alt="" />
+        <!-- People Section -->
+        <div class="section">
+          <label for="people-count" class="section__heading text-preset-5"
+            >Number of People</label
+          >
+          <span id="people-count-error" class="section__error"
+            >Hidden error message</span
+          >
+          <div class="field">
+            <img
+              class="field__icon"
+              src="./images/icon-person.svg"
+              alt="person icon"
+            />
             <input
+              id="people-count"
+              aria-describedby="people-count-error"
+              aria-invalid="false"
+              class="field__input text-preset-3"
               type="number"
+              inputmode="numeric"
               min="0"
               step="1"
-              name=""
-              id="number-of-people-value"
-              class="input w-100 pad-r"
               placeholder="0"
-              onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57"
             />
           </div>
         </div>
       </div>
 
-      <div id="tip-details">
-        <div id="tip-results">
-          <div id="tip-result-amount" class="tip-col">
-            <div>
-              <div class="tip-section-heading">Tip Amount</div>
-              <div class="per-person-subheading">/ person</div>
+      <div class="results-section">
+        <div class="results">
+          <div class="result">
+            <div class="result__label">
+              <span class="result__heading text-preset-5">Tip amount</span>
+              <span class="result__subheading text-preset-6">/ person</span>
             </div>
-            <div id="tip-amount-value" class="value">$0.00</div>
+            <output class="result__output text-preset-1">$0.00</output>
           </div>
 
-          <div id="bill-total" class="tip-col">
-            <div>
-              <div class="tip-section-heading">Total</div>
-              <div class="per-person-subheading">/ person</div>
+          <div class="result">
+            <div class="result__label">
+              <span class="result__heading text-preset-5">Total</span>
+              <span class="result__subheading text-preset-6">/ person</span>
             </div>
-            <div id="bill-total-value" class="value">$0.00</div>
+            <output class="result__output text-preset-1">$0.00</output>
           </div>
         </div>
-
-        <button type="reset" id="reset-button" disabled>Reset</button>
+        <button class="results__button text-preset-4">Reset</button>
       </div>
     </main>
   </body>
