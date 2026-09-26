@@ -37,8 +37,8 @@
           <label for="bill-amount" class="section__heading text-preset-5"
             >Bill</label
           >
-          <span id="bill-amount-error" class="section__error"
-            >Hidden error message</span
+          <span id="bill-amount-error" class="section__error" hidden
+            >Enter a valid amount</span
           >
           <div class="field">
             <img
@@ -132,8 +132,11 @@
           <label for="people-count" class="section__heading text-preset-5"
             >Number of People</label
           >
-          <span id="people-count-error" class="section__error"
-            >Hidden error message</span
+          <span
+            id="people-count-error"
+            class="section__error text-preset-5"
+            hidden
+            >Can't be zero</span
           >
           <div class="field">
             <img
@@ -148,7 +151,7 @@
               class="field__input text-preset-3"
               type="number"
               inputmode="numeric"
-              min="0"
+              min="1"
               step="1"
               placeholder="0"
             />
