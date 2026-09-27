@@ -33,8 +33,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // number input for people count
   const peopleInput = document.getElementById("people-count");
-  wireValidity(peopleInput, document.getElementById("people-count-error"));
+  const peopleErrorEl = document.getElementById("people-count-error");
+  wireValidity(peopleInput, peopleErrorEl);
   restrictKeystrokes(peopleInput, (key) => /^[0-9]$/.test(key));
+  peopleInput.addEventListener("input", () => {
+    peopleErrorEl.textContent =
+      parseInt(peopleInput.value, 10) < 0 ? "Can't be negative" : "Can't be zero";
+  });
 
   // tip & total calculation
   const tipOutput = document.getElementById("tip-amount-output");
@@ -77,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     billInput.setAttribute("aria-invalid", "false");
     peopleInput.setAttribute("aria-invalid", "false");
     document.getElementById("bill-amount-error").hidden = true;
-    document.getElementById("people-count-error").hidden = true;
+    peopleErrorEl.hidden = true;
 
     tipRadios.forEach((radio) => {
       radio.checked = false;
