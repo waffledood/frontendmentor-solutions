@@ -228,7 +228,6 @@ input[type="number"] {
 
 .pill--custom:focus-within {
   outline: 2px solid var(--green-400);
-  outline-offset: 2px;
 }
 
 .pill__custom-input {
