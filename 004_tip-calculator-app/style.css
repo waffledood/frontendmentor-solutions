@@ -131,9 +131,17 @@ main {
 
   background-color: var(--grey-50);
 
+  border: 2px solid transparent;
   border-radius: 5px;
 
   padding: 8px 16px;
+
+  transition: border-color 0.2s ease-out;
+}
+
+.field:hover,
+.field:focus-within {
+  border: 2px var(--green-400) solid;
 }
 
 .field__input {
