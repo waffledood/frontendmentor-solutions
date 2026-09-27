@@ -38,6 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const tipOutput = document.getElementById("tip-amount-output");
   const totalOutput = document.getElementById("total-output");
   const tipRadios = document.querySelectorAll('input[name="tip"]');
+  // reset button element
+  const resetButton = document.getElementById("reset-button");
 
   function formatCurrency(value) {
     return `$${value.toFixed(2)}`;
@@ -48,11 +50,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const peopleValid = peopleInput.value !== "" && peopleInput.validity.valid;
     const checkedTip = document.querySelector('input[name="tip"]:checked');
 
-    if (!billValid || !peopleValid || !checkedTip) {
+    const formValid = billValid && peopleValid && checkedTip;
+
+    if (!formValid) {
       tipOutput.textContent = formatCurrency(0);
       totalOutput.textContent = formatCurrency(0);
       return;
     }
+
+    resetButton.disabled = !formValid;
 
     const bill = parseFloat(billInput.value);
     const people = parseInt(peopleInput.value, 10);
