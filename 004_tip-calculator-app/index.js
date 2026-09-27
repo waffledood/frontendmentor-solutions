@@ -108,9 +108,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const customTipInput = document.getElementById("custom-tip");
   const customTipRadio = document.getElementById("tip-amount");
   restrictKeystrokes(customTipInput, twoDecimalPlacesFilter);
-  customTipInput.addEventListener("input", () => {
+  function activateCustomTip() {
     customTipRadio.value = customTipInput.value;
     customTipRadio.checked = true;
     calculate();
-  });
+  }
+  customTipInput.addEventListener("focus", activateCustomTip);
+  customTipInput.addEventListener("input", activateCustomTip);
 });
