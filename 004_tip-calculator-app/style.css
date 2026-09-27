@@ -68,7 +68,7 @@
   letter-spacing: 0px;
 }
 
-button:hover {
+button:hover:not(:disabled) {
   cursor: pointer;
 }
 
@@ -268,7 +268,12 @@ main {
     color 0.2s ease-out;
 }
 
-.results__button:hover {
+.results__button:disabled {
+  color: var(--green-800);
+  background-color: var(--green-750);
+}
+
+.results__button:hover:not(:disabled) {
   background-color: var(--green-200);
 }
 
