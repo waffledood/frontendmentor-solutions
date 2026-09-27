@@ -121,9 +121,18 @@
               name="tip"
               value="0"
             />
-            <label class="pill pill--custom text-preset-3" for="tip-amount"
-              >Custom</label
-            >
+            <label class="pill pill--custom" for="tip-amount">
+              <input
+                id="custom-tip"
+                class="pill__custom-input text-preset-3"
+                type="number"
+                inputmode="decimal"
+                min="0"
+                step="0.01"
+                placeholder="Custom"
+                aria-label="Custom tip percentage"
+              />
+            </label>
           </div>
         </div>
 
