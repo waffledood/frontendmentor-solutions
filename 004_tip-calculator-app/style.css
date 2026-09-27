@@ -81,6 +81,12 @@ body {
   justify-content: center;
 
   background-color: var(--grey-200);
+
+  @media (max-width: 375px) {
+    height: auto;
+    min-height: 100vh;
+    align-items: flex-start;
+  }
 }
 
 main {
@@ -99,6 +105,13 @@ main {
     flex-direction: column;
     gap: 40px;
   }
+
+  @media (max-width: 375px) {
+    margin-top: 144px;
+    padding: 32px 24px;
+    gap: 32px;
+    border-radius: 25px 25px 0px 0px;
+  }
 }
 
 .bill-section {
@@ -109,6 +122,11 @@ main {
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 24px;
+  }
+
+  @media (max-width: 375px) {
+    flex-direction: column;
+    gap: 32px;
   }
 }
 
@@ -147,6 +165,10 @@ main {
   padding: 8px 16px;
 
   transition: border-color 0.2s ease-out;
+
+  @media (max-width: 375px) {
+    padding: 6px 17px;
+  }
 }
 
 .field:hover,
@@ -191,6 +213,11 @@ input[type="number"] {
   gap: 16px;
 
   width: 100%;
+
+  @media (max-width: 375px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
 }
 
 .pill__input {
@@ -269,6 +296,11 @@ input[type="number"] {
 
     gap: 16px;
   }
+
+  @media (max-width: 375px) {
+    padding: 24px;
+    gap: 32px;
+  }
 }
 
 .results {
@@ -279,6 +311,10 @@ input[type="number"] {
   @media (max-width: 768px) {
     gap: 8px;
   }
+
+  @media (max-width: 375px) {
+    gap: 24px;
+  }
 }
 
 .result {
@@ -286,6 +322,14 @@ input[type="number"] {
   flex-direction: row;
   justify-content: space-between;
   column-gap: 96px;
+
+  @media (max-width: 768px) {
+    gap: 0px;
+  }
+
+  @media (max-width: 375px) {
+    gap: 0px;
+  }
 }
 
 .result__label {
@@ -304,6 +348,12 @@ input[type="number"] {
 
 .result__output {
   color: var(--green-400);
+
+  @media (max-width: 375px) {
+    font-size: 32px;
+    line-height: auto;
+    letter-spacing: -0.67px;
+  }
 }
 
 .results__button {
@@ -312,7 +362,7 @@ input[type="number"] {
   border: 0px var(--green-400) solid;
   border-radius: 5px;
 
-  padding: 8px 0px;
+  padding: 8px 40px;
 
   width: 100%;
 
@@ -321,6 +371,10 @@ input[type="number"] {
   transition:
     background-color 0.2s ease-out,
     color 0.2s ease-out;
+
+  @media (max-width: 375px) {
+    padding: 8px 32px;
+  }
 }
 
 .results__button:disabled {
