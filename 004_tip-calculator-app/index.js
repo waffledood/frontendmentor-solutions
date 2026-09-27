@@ -16,6 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  function digitsOnlyFilter(key) {
+    return /^[0-9]$/.test(key);
+  }
+
+  function maxLengthDigitsFilter(maxLength) {
+    return (key, value) => digitsOnlyFilter(key) && value.length < maxLength;
+  }
+
   function twoDecimalPlacesFilter(key, value) {
     if (/^[0-9]$/.test(key)) {
       const decimalIndex = value.indexOf(".");
@@ -35,10 +43,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const peopleInput = document.getElementById("people-count");
   const peopleErrorEl = document.getElementById("people-count-error");
   wireValidity(peopleInput, peopleErrorEl);
-  restrictKeystrokes(peopleInput, (key) => /^[0-9]$/.test(key));
+  restrictKeystrokes(peopleInput, digitsOnlyFilter);
   peopleInput.addEventListener("input", () => {
     peopleErrorEl.textContent =
-      parseInt(peopleInput.value, 10) < 0 ? "Can't be negative" : "Can't be zero";
+      parseInt(peopleInput.value, 10) < 0
+        ? "Can't be negative"
+        : "Can't be zero";
   });
 
   // tip & total calculation
@@ -56,9 +66,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const billValid = billInput.value !== "" && billInput.validity.valid;
     const peopleValid = peopleInput.value !== "" && peopleInput.validity.valid;
     const checkedTip = document.querySelector('input[name="tip"]:checked');
+    const customTipValid =
+      checkedTip !== customTipRadio || customTipInput.validity.valid;
 
     const formValid =
-      billValid && peopleValid && checkedTip && checkedTip.value !== "";
+      billValid &&
+      peopleValid &&
+      checkedTip &&
+      checkedTip.value !== "" &&
+      customTipValid;
 
     resetButton.disabled = !formValid;
 
@@ -107,7 +123,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // radio, and the radio's own value must mirror whatever's typed here.
   const customTipInput = document.getElementById("custom-tip");
   const customTipRadio = document.getElementById("tip-amount");
-  restrictKeystrokes(customTipInput, twoDecimalPlacesFilter);
+  wireValidity(customTipInput, document.getElementById("tip-amount-error"));
+  restrictKeystrokes(customTipInput, maxLengthDigitsFilter(2));
   function activateCustomTip() {
     customTipRadio.value = customTipInput.value;
     customTipRadio.checked = true;

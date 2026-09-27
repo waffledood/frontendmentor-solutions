@@ -94,12 +94,22 @@ main {
 
   background-color: var(--white);
   border-radius: 25px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 40px;
+  }
 }
 
 .bill-section {
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 24px;
+  }
 }
 
 .section {
@@ -232,7 +242,6 @@ input[type="number"] {
 
 .pill__custom-input {
   min-width: 0;
-  max-width: 116px;
 
   border: none;
   outline: none;
@@ -254,12 +263,22 @@ input[type="number"] {
   display: flex;
   flex-direction: column;
   gap: 128px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+
+    gap: 16px;
+  }
 }
 
 .results {
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @media (max-width: 768px) {
+    gap: 8px;
+  }
 }
 
 .result {
@@ -313,10 +332,8 @@ input[type="number"] {
   background-color: var(--green-200);
 }
 
-#bill-amount-error {
-  color: var(--orange-400);
-}
-
+#bill-amount-error,
+#tip-amount-error,
 #people-count-error {
   color: var(--orange-400);
 }
