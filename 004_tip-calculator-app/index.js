@@ -52,13 +52,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const formValid = billValid && peopleValid && checkedTip;
 
+    resetButton.disabled = !formValid;
+
     if (!formValid) {
       tipOutput.textContent = formatCurrency(0);
       totalOutput.textContent = formatCurrency(0);
       return;
     }
-
-    resetButton.disabled = !formValid;
 
     const bill = parseFloat(billInput.value);
     const people = parseInt(peopleInput.value, 10);
@@ -67,6 +67,25 @@ document.addEventListener("DOMContentLoaded", function () {
     tipOutput.textContent = formatCurrency((bill * tipRate) / people);
     totalOutput.textContent = formatCurrency((bill * (1 + tipRate)) / people);
   }
+
+  function resetForm() {
+    billInput.value = "";
+    peopleInput.value = "";
+    billInput.setAttribute("aria-invalid", "false");
+    peopleInput.setAttribute("aria-invalid", "false");
+    document.getElementById("bill-amount-error").hidden = true;
+    document.getElementById("people-count-error").hidden = true;
+
+    tipRadios.forEach((radio) => {
+      radio.checked = false;
+    });
+
+    tipOutput.textContent = formatCurrency(0);
+    totalOutput.textContent = formatCurrency(0);
+    resetButton.disabled = true;
+  }
+
+  resetButton.addEventListener("click", resetForm);
 
   billInput.addEventListener("input", calculate);
   peopleInput.addEventListener("input", calculate);
