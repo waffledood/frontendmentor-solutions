@@ -33,4 +33,36 @@ document.addEventListener("DOMContentLoaded", function () {
   const peopleInput = document.getElementById("people-count");
   wireValidity(peopleInput, document.getElementById("people-count-error"));
   restrictKeystrokes(peopleInput, (key) => /^[0-9]$/.test(key));
+
+  // tip & total calculation
+  const tipOutput = document.getElementById("tip-amount-output");
+  const totalOutput = document.getElementById("total-output");
+  const tipRadios = document.querySelectorAll('input[name="tip"]');
+
+  function formatCurrency(value) {
+    return `$${value.toFixed(2)}`;
+  }
+
+  function calculate() {
+    const billValid = billInput.value !== "" && billInput.validity.valid;
+    const peopleValid = peopleInput.value !== "" && peopleInput.validity.valid;
+    const checkedTip = document.querySelector('input[name="tip"]:checked');
+
+    if (!billValid || !peopleValid || !checkedTip) {
+      tipOutput.textContent = formatCurrency(0);
+      totalOutput.textContent = formatCurrency(0);
+      return;
+    }
+
+    const bill = parseFloat(billInput.value);
+    const people = parseInt(peopleInput.value, 10);
+    const tipRate = parseFloat(checkedTip.value) / 100;
+
+    tipOutput.textContent = formatCurrency((bill * tipRate) / people);
+    totalOutput.textContent = formatCurrency((bill * (1 + tipRate)) / people);
+  }
+
+  billInput.addEventListener("input", calculate);
+  peopleInput.addEventListener("input", calculate);
+  tipRadios.forEach((radio) => radio.addEventListener("change", calculate));
 });
