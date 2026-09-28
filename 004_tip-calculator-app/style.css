@@ -103,6 +103,7 @@ main {
 
   @media (max-width: 768px) {
     margin-top: 144px;
+    margin-bottom: 72px;
     flex-direction: column;
     gap: 40px;
   }
