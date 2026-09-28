@@ -1,158 +1,135 @@
 document.addEventListener("DOMContentLoaded", function () {
-  initPredefinedTips();
-  initResetButton();
-  initCustomTipInput();
-  validateNumberInputs();
+  function restrictKeystrokes(input, isAllowedKey) {
+    input.addEventListener("keydown", (e) => {
+      if (e.ctrlKey || e.metaKey || e.key.length > 1) return;
+      if (!isAllowedKey(e.key, input.value)) {
+        e.preventDefault();
+      }
+    });
+  }
 
-  // TODO - When computing the final tip amount & total bill per person, prevent computation when input fields have error
-});
+  function wireValidity(input, errorEl) {
+    input.addEventListener("input", () => {
+      const valid = input.validity.valid;
+      errorEl.hidden = valid;
+      input.setAttribute("aria-invalid", String(!valid));
+    });
+  }
 
-function initResetButton() {
+  function digitsOnlyFilter(key) {
+    return /^[0-9]$/.test(key);
+  }
+
+  function maxLengthDigitsFilter(maxLength) {
+    return (key, value) => digitsOnlyFilter(key) && value.length < maxLength;
+  }
+
+  function twoDecimalPlacesFilter(key, value) {
+    if (/^[0-9]$/.test(key)) {
+      const decimalIndex = value.indexOf(".");
+      // ponytail: assumes left-to-right typing (selectionStart is unavailable
+      // on type="number" inputs, so mid-string edits can't be detected here)
+      return decimalIndex === -1 || value.length - decimalIndex - 1 < 2;
+    }
+    return key === "." && !value.includes(".");
+  }
+
+  // number input for bill amount
+  const billInput = document.getElementById("bill-amount");
+  wireValidity(billInput, document.getElementById("bill-amount-error"));
+  restrictKeystrokes(billInput, twoDecimalPlacesFilter);
+
+  // number input for people count
+  const peopleInput = document.getElementById("people-count");
+  const peopleErrorEl = document.getElementById("people-count-error");
+  wireValidity(peopleInput, peopleErrorEl);
+  restrictKeystrokes(peopleInput, digitsOnlyFilter);
+  peopleInput.addEventListener("input", () => {
+    peopleErrorEl.textContent =
+      parseInt(peopleInput.value, 10) < 0
+        ? "Can't be negative"
+        : "Can't be zero";
+  });
+
+  // tip & total calculation
+  const tipOutput = document.getElementById("tip-amount-output");
+  const totalOutput = document.getElementById("total-output");
+  const tipRadios = document.querySelectorAll('input[name="tip"]');
+  // reset button element
   const resetButton = document.getElementById("reset-button");
-  resetButton.addEventListener("click", (event) => {
-    // Disable reset button
+
+  function formatCurrency(value) {
+    return `$${value.toFixed(2)}`;
+  }
+
+  function calculate() {
+    const billValid = billInput.value !== "" && billInput.validity.valid;
+    const peopleValid = peopleInput.value !== "" && peopleInput.validity.valid;
+    const checkedTip = document.querySelector('input[name="tip"]:checked');
+    const customTipValid =
+      checkedTip !== customTipRadio || customTipInput.validity.valid;
+
+    const formValid =
+      billValid &&
+      peopleValid &&
+      checkedTip &&
+      checkedTip.value !== "" &&
+      customTipValid;
+
+    resetButton.disabled = !formValid;
+
+    if (!formValid) {
+      tipOutput.textContent = formatCurrency(0);
+      totalOutput.textContent = formatCurrency(0);
+      return;
+    }
+
+    const bill = parseFloat(billInput.value);
+    const people = parseInt(peopleInput.value, 10);
+    const tipRate = parseFloat(checkedTip.value) / 100;
+
+    tipOutput.textContent = formatCurrency((bill * tipRate) / people);
+    totalOutput.textContent = formatCurrency((bill * (1 + tipRate)) / people);
+  }
+
+  function resetForm() {
+    billInput.value = "";
+    peopleInput.value = "";
+    billInput.setAttribute("aria-invalid", "false");
+    peopleInput.setAttribute("aria-invalid", "false");
+    document.getElementById("bill-amount-error").hidden = true;
+    peopleErrorEl.hidden = true;
+
+    tipRadios.forEach((radio) => {
+      radio.checked = false;
+    });
+    customTipInput.value = "";
+    customTipRadio.value = "";
+
+    tipOutput.textContent = formatCurrency(0);
+    totalOutput.textContent = formatCurrency(0);
     resetButton.disabled = true;
+  }
 
-    // Clear all input fields & calculated bill & tip values
-    const billInputValue = document.getElementById("bill-input-value");
-    billInputValue.value = "";
+  resetButton.addEventListener("click", resetForm);
 
-    const tipElement = document.querySelector('input[name="percent"]:checked');
-    tipElement.checked = false;
+  billInput.addEventListener("input", calculate);
+  peopleInput.addEventListener("input", calculate);
+  tipRadios.forEach((radio) => radio.addEventListener("change", calculate));
 
-    const customTipAmount = document.getElementById("custom-tip-amount");
-    customTipAmount.value = "";
-
-    const numberOfPeopleValue = document.getElementById(
-      "number-of-people-value"
-    );
-    numberOfPeopleValue.value = "";
-
-    const tipAmountValueElement = document.getElementById("tip-amount-value");
-    tipAmountValueElement.innerHTML = "$0.00";
-
-    const billTotalValueElement = document.getElementById("bill-total-value");
-    billTotalValueElement.innerHTML = "$0.00";
-  });
-}
-
-function initPredefinedTips() {
-  const radioButtons = document.getElementsByName("percent");
-  [...radioButtons].forEach((radioButton) => {
-    if (radioButton.id !== "percent-custom") {
-      radioButton.addEventListener("click", (event) => {
-        calculate();
-      });
-    }
-  });
-}
-
-function initCustomTipInput() {
-  const customTipAmountInput = document.getElementById("custom-tip-amount");
-
-  customTipAmountInput.addEventListener("click", (event) => {
-    const percentCustomInput = document.getElementById("percent-custom");
-    percentCustomInput.checked = true;
-  });
-
-  customTipAmountInput.addEventListener("blur", (event) => {
-    if (!customTipAmountInput.value) {
-      customTipAmountInput.value = 0;
-    } else {
-      document.getElementById("percent-custom").value =
-        customTipAmountInput.value;
-    }
-
-    // Calculate bill & tip
+  // custom tip: nested inside the "Custom" pill's label, sharing the "tip"
+  // radio group. Typing into it has to manually drive the radio it lives
+  // next to, since focusing/typing in a sibling element doesn't check a
+  // radio, and the radio's own value must mirror whatever's typed here.
+  const customTipInput = document.getElementById("custom-tip");
+  const customTipRadio = document.getElementById("tip-amount");
+  wireValidity(customTipInput, document.getElementById("tip-amount-error"));
+  restrictKeystrokes(customTipInput, maxLengthDigitsFilter(2));
+  function activateCustomTip() {
+    customTipRadio.value = customTipInput.value;
+    customTipRadio.checked = true;
     calculate();
-  });
-}
-
-function validateNumberInputs() {
-  const billInputValueElement = document.getElementById("bill-input-value");
-  const billInputValueErrorMessageElement = document.getElementById(
-    "bill-input-value-error-message"
-  );
-
-  billInputValueElement.addEventListener("focusout", (event) => {
-    const billInputValue = event.target.value;
-
-    // Add input-error class to input & make error message visible if input is invalid
-    if (billInputValue === 0 || billInputValue === "") {
-      billInputValueElement.classList.add("input-error");
-      billInputValueErrorMessageElement.hidden = false;
-    } else {
-      // Remove input-error class & make error message hidden if input is valid
-      billInputValueElement.classList.remove("input-error");
-      billInputValueErrorMessageElement.hidden = true;
-
-      // Calculate bill & tip
-      calculate();
-    }
-  });
-
-  const numberOfPeopleValueElement = document.getElementById(
-    "number-of-people-value"
-  );
-  const numberOfPeopleValueErrorMessageElement = document.getElementById(
-    "number-of-people-value-error-message"
-  );
-
-  numberOfPeopleValueElement.addEventListener("focusout", (event) => {
-    const numberOfPeopleInputValue = event.target.value;
-
-    // Add input-error class to input & make error message visible if input is invalid
-    if (numberOfPeopleInputValue === 0 || numberOfPeopleInputValue === "") {
-      numberOfPeopleValueElement.classList.add("input-error");
-      numberOfPeopleValueErrorMessageElement.hidden = false;
-    } else {
-      // Remove input-error class & make error message hidden if input is valid
-      numberOfPeopleValueElement.classList.remove("input-error");
-      numberOfPeopleValueErrorMessageElement.hidden = true;
-
-      // Calculate bill & tip
-      calculate();
-    }
-  });
-}
-
-function calculate() {
-  // Retrieve bill value
-  const billInputValue = Number(
-    document.querySelector("#bill-input-value").value
-  );
-
-  const tipElement = document.querySelector('input[name="percent"]:checked');
-  var tipValue;
-  if (tipElement) {
-    tipValue = Number(tipElement.value);
   }
-
-  // Retrieve numer of people value
-  const numberOfPeopleInputValue = Number(
-    document.querySelector("#number-of-people-value").value
-  );
-
-  // Calculate the bill & tip amount per person if the required values are input
-  if (billInputValue && tipValue && numberOfPeopleInputValue) {
-    // Calculate & show the total bill per person
-    const totalBillValue = billInputValue * (1 + tipValue / 100);
-    const billPerPerson = (totalBillValue / numberOfPeopleInputValue).toFixed(
-      2
-    );
-
-    const billTotalValueElement = document.getElementById("bill-total-value");
-    billTotalValueElement.innerHTML = `$${billPerPerson}`;
-
-    // Calculate & show the total tip per person
-    const totalTipValue = (tipValue / 100) * billInputValue;
-    const tipPerPerson = (totalTipValue / numberOfPeopleInputValue).toFixed(2);
-
-    const tipAmountValueElement = document.getElementById("tip-amount-value");
-    tipAmountValueElement.innerHTML = `${tipPerPerson}`;
-
-    // Make Reset button selectable
-    const resetButton = document.getElementById("reset-button");
-    resetButton.disabled = false;
-  }
-}
+  customTipInput.addEventListener("focus", activateCustomTip);
+  customTipInput.addEventListener("input", activateCustomTip);
+});
