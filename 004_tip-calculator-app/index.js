@@ -9,11 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function wireValidity(input, errorEl) {
-    input.addEventListener("input", () => {
+    function checkValidity() {
       const valid = input.validity.valid;
       errorEl.hidden = valid;
       input.setAttribute("aria-invalid", String(!valid));
-    });
+    }
+    input.addEventListener("input", checkValidity);
+    input.addEventListener("blur", checkValidity);
   }
 
   function digitsOnlyFilter(key) {

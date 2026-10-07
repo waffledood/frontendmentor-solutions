@@ -178,6 +178,10 @@ main {
   border: 2px var(--green-400) solid;
 }
 
+.field:has(.field__input[aria-invalid="true"]) {
+  border-color: var(--orange-400);
+}
+
 .field__input {
   min-width: 0;
 
@@ -267,6 +271,10 @@ input[type="number"] {
 
 .pill--custom:focus-within {
   outline: 2px solid var(--green-400);
+}
+
+.pill--custom:has(.pill__custom-input[aria-invalid="true"]) {
+  outline: 2px solid var(--orange-400);
 }
 
 .pill__custom-input {
